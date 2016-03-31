@@ -1,0 +1,22 @@
+ <!--<iframe src="http://app.pradict.com" height="450" width="768" name="rbaFrame" style="overflow-x:hidden; border:none;" scrolling="auto"></iframe>-->
+
+<html>
+    <head>
+    	<script type="text/javascript">
+    		function GetIFrameUrl()
+    		{
+    			alert('url = ' + document.frames['frame1'].location.href);
+    		}
+    	</script>
+    </head>
+    <body>
+    	<iframe src="http://www.vrisini.de/projects/pradict" name="container-frame" id="container-frame" seamless="seamless" width="100%" height="100%" style="overflow-x:hidden; border:none;" scrolling="auto" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation">
+    	<script>
+		  var urlfrm = document.frames['container-frame'].location.href;
+		  var urlloc = urlfrm+(urlfrm.indexOf('?') == -1 ? '?' : '&')+'type=98';
+		  $('#user').val(urlloc);
+		</script>
+    	
+    	</iframe>
+    </body>
+</html>
